@@ -1,0 +1,326 @@
+/* :root {
+    --bg-dark-gray: #333333;
+    --text-light-gray: #AAAAAA;
+    --accent-magenta: #FF00FF;
+    --error-soft-red: #FF6666;
+    --link-sky-blue: #4DB8FF;
+    --button-orange: #FF8C00;
+} */
+
+body {
+    font-size: 1rem; 
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+p, ul, ol {
+    margin-bottom: 20px;
+}
+
+a, button {
+    transition: all 0.3s ease;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+img {
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+nav {
+    background-color: darkgray;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand-name {
+    font-size: 24px;          
+    font-weight: bold;        
+    text-decoration: underline overline;
+    text-decoration-color: white;
+    white-space: nowrap;
+}
+
+.brand-name a:hover {
+    text-decoration: underline overline;
+    text-decoration-color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    text-decoration: underline;
+}
+
+nav a.active {
+    background-color: rgba(85, 85, 85, 0.5);  /* Semi-transparent #555 */
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+.social-media-section {
+    background-color: darkgray;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.social-media-section a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.social-media-section a:hover {
+    background-color: lightgray;
+    color: black;
+    text-decoration: underline;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+footer {
+    background-color: darkgray; /* Slightly darker than the nav bar for distinction */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Push the section to the bottom */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    color: white;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+.welcome-section {
+    padding: 20px;
+    background-color: black;
+    margin: 20px 0;
+    text-align: justify;
+    position: relative;
+    display: flex;           
+    flex-direction: column;  
+    align-items: center;     
+}
+
+.welcome-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 50px;
+    width: 100%; 
+}
+
+.welcome-section p {
+    width: 85%;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+.drinks-section, .pastries-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.drink-item, .pastry-item {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */;
+}
+
+.drink-item img, .pastry-item img {
+    width: 100%;
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensure images cover the set height without distortion */
+}
+
+.drink-item h3, .drink-item p, .pastry-item h3, .pastry-item p {
+    /* margin: 10px 0; */
+    flex: 1; /* Allow text content to take up all available space */
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+.location-section, .reviews-section {
+    padding: 20px;
+    background-color: black; /* A light gray background for distinction */
+    margin: 20px 0;
+}
+
+.location-section h2, .reviews-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+address {
+    font-style: normal; /* By default, the <address> tag is italicized. This resets it. */
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    padding: 10px;
+    border-left: 4px solid #333;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    align-items:start
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+.hours-section, .events-section {
+    padding: 20px;
+    background-color: black;
+    margin: 20px 0;
+}
+
+.hours-section h2, .events-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+.events-section ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    align-items:start
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+.contact-section {
+    background-color: black;
+    text-align: center;
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 70%;
+    padding: 10px;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #FF4500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: lightgray;
+    color: #008080;
+    text-decoration: underline;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+/* Media Queries */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav ul {
+        justify-content: space-between;
+    }
+}
