@@ -8,6 +8,8 @@
 } */
 
 body {
+    padding: 0;
+    margin: 0;
     font-size: 1rem; 
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -22,9 +24,9 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
-p, ul, ol {
+/* p, ul, ol {
     margin-bottom: 20px;
-}
+} */
 
 a, button {
     transition: all 0.3s ease;
@@ -132,17 +134,15 @@ nav a.active {
     text-decoration: underline;
 }
 
-/* ------------------------------------------------------------------------------------------ */
-
 footer {
-    background-color: darkgray; /* Slightly darker than the nav bar for distinction */
+    background-color: darkgray;
     padding: 20px 0;
     text-align: center;
     margin-top: auto; /* Push the section to the bottom */
 }
 
 footer p {
-    margin: 0; /* Remove default margin */
+    margin: 0;
     color: white;
 }
 
@@ -195,7 +195,7 @@ footer p {
 }
 
 .drink-item h3, .drink-item p, .pastry-item h3, .pastry-item p {
-    /* margin: 10px 0; */
+    margin: 10px 0;
     flex: 1; /* Allow text content to take up all available space */
 }
 
@@ -203,7 +203,7 @@ footer p {
 
 .location-section, .reviews-section {
     padding: 20px;
-    background-color: black; /* A light gray background for distinction */
+    background-color: black;
     margin: 20px 0;
 }
 
@@ -311,15 +311,24 @@ button:hover {
 
 /* ------------------------------------------------------------------------------------------ */
 
-/* Media Queries */
+
 @media (min-width: 768px) {
+    body {
+        font-size: 1.125rem;
+    }
+
     nav ul {
         flex-direction: row;
         justify-content: space-around;
     }
 }
 
+/* Desktop styles */
 @media (min-width: 1024px) {
+    body {
+        font-size: 1.25rem;
+    }
+
     nav ul {
         justify-content: space-between;
     }
